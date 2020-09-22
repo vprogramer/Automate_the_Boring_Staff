@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45226be1-83e4-40da-a3f7-b6aea23d727a" name="Default Changelist" comment="" />
+    <list default="true" id="45226be1-83e4-40da-a3f7-b6aea23d727a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_exam_ticket.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_exam_ticket.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +18,32 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="2cab20eb-cc0b-4a5f-8c03-2bfcc010314a" />
   <component name="ProjectId" id="1hE86wgQ6jHGa8zlxfpTyFmv2qb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RunManager" selected="Python.generate_exam_ticket">
     <configuration name="generate_exam_ticket" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -180,29 +201,43 @@
       <workItem from="1599736491644" duration="1773000" />
       <workItem from="1599820525732" duration="599000" />
       <workItem from="1600322320002" duration="7452000" />
+      <workItem from="1600411599223" duration="5339000" />
+      <workItem from="1600684849007" duration="3864000" />
+      <workItem from="1600756099747" duration="39000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1874" height="272" key="GridCell.Tab.0.bottom" timestamp="1600350134148">
+    <state x="781" y="418" key="Github.ShareDialog" timestamp="1600411630135">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1600350134148" />
-    <state width="1874" height="272" key="GridCell.Tab.0.center" timestamp="1600350134148">
+    <state x="781" y="418" key="Github.ShareDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1600411630135" />
+    <state x="696" y="203" key="Github.UntrackedFilesDialog" timestamp="1600411641222">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1600350134148" />
-    <state width="1874" height="272" key="GridCell.Tab.0.left" timestamp="1600350134147">
+    <state x="696" y="203" key="Github.UntrackedFilesDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1600411641222" />
+    <state width="1874" height="272" key="GridCell.Tab.0.bottom" timestamp="1600696383759">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1600350134147" />
-    <state width="1874" height="272" key="GridCell.Tab.0.right" timestamp="1600350134148">
+    <state width="1874" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1600696383759" />
+    <state width="1874" height="272" key="GridCell.Tab.0.center" timestamp="1600696383755">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600350134148" />
+    <state width="1874" height="272" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1600696383755" />
+    <state width="1874" height="272" key="GridCell.Tab.0.left" timestamp="1600696383753">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state width="1874" height="272" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1600696383753" />
+    <state width="1874" height="272" key="GridCell.Tab.0.right" timestamp="1600696383757">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state width="1874" height="272" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600696383757" />
     <state width="1874" height="336" key="GridCell.Tab.1.bottom" timestamp="1600350134143">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -219,6 +254,10 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state width="1874" height="336" key="GridCell.Tab.1.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600350134143" />
+    <state x="461" y="153" key="SettingsEditor" timestamp="1600756137509">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="461" y="153" key="SettingsEditor/0.0.1920.1035@0.0.1920.1035" timestamp="1600756137509" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1599567693181">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -230,8 +269,8 @@
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$mouseNow.coverage" NAME="mouseNow Coverage Results" MODIFIED="1599647683153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$main.coverage" NAME="main Coverage Results" MODIFIED="1599564727011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$work_with_files.coverage" NAME="work_with_files Coverage Results" MODIFIED="1600325006785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$randomQuizGenerator.coverage" NAME="randomQuizGenerator Coverage Results" MODIFIED="1600325085385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
+    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$randomQuizGenerator.coverage" NAME="randomQuizGenerator Coverage Results" MODIFIED="1600416034178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$lucky.coverage" NAME="lucky Coverage Results" MODIFIED="1599654853283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
-    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$generate_exam_ticket.coverage" NAME="generate_exam_ticket Coverage Results" MODIFIED="1600350132270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$generate_exam_ticket.coverage" NAME="generate_exam_ticket Coverage Results" MODIFIED="1600693650691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
