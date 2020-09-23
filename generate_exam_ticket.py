@@ -1,8 +1,4 @@
-import os
-import sys
 import random
-
-number_of_questions = 50
 
 
 class Question(object):
@@ -31,7 +27,8 @@ class Question(object):
     def generate(self):
         states = list(self.capitals.keys())
         random.shuffle(states)
-        self.correct_state = states[random.randint(0, number_of_questions-1)]
+        self.correct_state = states[self.number]
+        # self.correct_state = states[random.randint(0, number_of_questions-1)]
         self.correct_capital = self.capitals[self.correct_state]
 
         wrong_answers = list(self.capitals.values())
@@ -78,38 +75,50 @@ class Ticket(object):
 class FileTicket(Ticket):
     def __init__(self, number):
         Ticket.__init__(self, number)
-        self.variants = ['A', 'B', 'C', 'D']
+        self.variants = 'ABCD'
 
     def write_all_questions(self):
-        filename = 'capitals_quiz{}.txt'.format(self.number + 1)
-        with open(filename, 'w') as f:
-            for i in range(number_of_questions):
-                f.write('{0}) What is the capital of {1}'.format(i + 1, self.answer[i][0]))
-                for j in range(len(self.variants)):
-                    f.write('{0}: {1}'.format(self.variants[j], self.answer[i][2][j]))
-            f.write('')
+        filename = 'quiz_files/capitals_quiz{}.txt'.format(self.number + 1)
+        with open(filename, 'a') as f:
+            for question in range(number_of_questions):
+                f.write('{0}) What is the capital of {1}?'.format(question + 1, self.get_correct_answers()[question][0]))
+                f.write('\n')
+                for var in range(len(self.variants)):
+                    f.write('{0}: {1}'.format(self.variants[var], self.get_all_answers()[question][var]))
+                    f.write('\n')
+                f.write('\n\n')
+            f.close()
 
     def write_head(self):
-        filename = 'capitals_quiz{}.txt'.format(self.number + 1)
+        filename = 'quiz_files/capitals_quiz{}.txt'.format(self.number + 1)
         with open(filename, 'w') as f:
             f.write('Name:\n\nDate:\n\nPeriod:\n\n')
             f.write((' ' * 20) + 'State Capitals Quiz (Form {0})'.format(self.number + 1))
             f.write('\n\n')
+            f.close()
 
 
 class AnswerFileTicket(FileTicket):
     def __init__(self, number):
+        self.number = number
         super(AnswerFileTicket, self).__init__(number)
 
-    def write_answer(self, number):
-        filename = 'capitals_quiz_answer{}.txt'.format(number + 1)
+    def write_answer(self):
+        filename = 'quiz_files/capitals_quiz_answer{}.txt'.format(self.number + 1)
         with open(filename, 'w') as f:
             f.write('Answers:')
-            for i in range(number_of_questions):
-                f.write('{0}: {1} ({2})'.format(i, ))
+            f.write('\n')
+            for num_quest in range(number_of_questions):
+                f.write('{0}: {1} ({2})'.format(num_quest + 1, self.variants[self.get_correct_position()[num_quest]], self.get_correct_answers()[num_quest][1] ))
+                f.write('\n')
+            f.write('\n')
+            f.close()
 
 
-ticket = Ticket(1)
-print(ticket.get_correct_answers())
-print(ticket.get_all_answers())
-print(ticket.get_correct_position())
+if __name__ == '__main__':
+    number_of_questions = 50
+    for i in range(number_of_questions):
+        ticket = AnswerFileTicket(i)
+        ticket.write_answer()
+        ticket.write_head()
+        ticket.write_all_questions()

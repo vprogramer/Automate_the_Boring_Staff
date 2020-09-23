@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45226be1-83e4-40da-a3f7-b6aea23d727a" name="Default Changelist" comment="Update FileTicket and AnswerFileTicket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generate_exam_ticket.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_exam_ticket.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.generate_exam_ticket">
     <configuration name="generate_exam_ticket" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -212,6 +213,7 @@
       <workItem from="1600411599223" duration="5339000" />
       <workItem from="1600684849007" duration="3864000" />
       <workItem from="1600756099747" duration="9889000" />
+      <workItem from="1600838679903" duration="4839000" />
     </task>
     <task id="LOCAL-00001" summary="Update FileTicket and AnswerFileTicket">
       <created>1600756193092</created>
@@ -236,6 +238,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update FileTicket and AnswerFileTicket" />
@@ -250,22 +253,22 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="696" y="203" key="Github.UntrackedFilesDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1600411641222" />
-    <state width="1874" height="272" key="GridCell.Tab.0.bottom" timestamp="1600781826198">
+    <state width="1874" height="272" key="GridCell.Tab.0.bottom" timestamp="1600845060218">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1600781826198" />
-    <state width="1874" height="272" key="GridCell.Tab.0.center" timestamp="1600781826197">
+    <state width="1874" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1600845060218" />
+    <state width="1874" height="272" key="GridCell.Tab.0.center" timestamp="1600845060218">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1600781826197" />
-    <state width="1874" height="272" key="GridCell.Tab.0.left" timestamp="1600781826197">
+    <state width="1874" height="272" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1600845060218" />
+    <state width="1874" height="272" key="GridCell.Tab.0.left" timestamp="1600845060217">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1600781826197" />
-    <state width="1874" height="272" key="GridCell.Tab.0.right" timestamp="1600781826198">
+    <state width="1874" height="272" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1600845060217" />
+    <state width="1874" height="272" key="GridCell.Tab.0.right" timestamp="1600845060218">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1874" height="272" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600781826198" />
+    <state width="1874" height="272" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600845060218" />
     <state width="1874" height="336" key="GridCell.Tab.1.bottom" timestamp="1600350134143">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -282,10 +285,10 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state width="1874" height="336" key="GridCell.Tab.1.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600350134143" />
-    <state x="461" y="153" key="SettingsEditor" timestamp="1600756137509">
+    <state x="461" y="153" key="SettingsEditor" timestamp="1600844492211">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="461" y="153" key="SettingsEditor/0.0.1920.1035@0.0.1920.1035" timestamp="1600756137509" />
+    <state x="461" y="153" key="SettingsEditor/0.0.1920.1035@0.0.1920.1035" timestamp="1600844492211" />
     <state x="560" y="254" key="Vcs.Push.Dialog.v2" timestamp="1600756206431">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -303,6 +306,6 @@
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$work_with_files.coverage" NAME="work_with_files Coverage Results" MODIFIED="1600325006785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$randomQuizGenerator.coverage" NAME="randomQuizGenerator Coverage Results" MODIFIED="1600416034178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$lucky.coverage" NAME="lucky Coverage Results" MODIFIED="1599654853283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
-    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$generate_exam_ticket.coverage" NAME="generate_exam_ticket Coverage Results" MODIFIED="1600781826166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$generate_exam_ticket.coverage" NAME="generate_exam_ticket Coverage Results" MODIFIED="1600845060195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
