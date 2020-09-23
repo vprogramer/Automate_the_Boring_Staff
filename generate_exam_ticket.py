@@ -1,4 +1,5 @@
 import random
+import time
 
 
 class Question(object):
@@ -115,10 +116,63 @@ class AnswerFileTicket(FileTicket):
             f.close()
 
 
+class Test(object):
+    def __init__(self):
+        self.number_ticket = None
+
+    def choose_ticket(self):
+        self.number_ticket = 32 #random.randint(1, number_tickets)
+
+    def show_ticket(self):
+        filename = 'quiz_files/capitals_quiz{}.txt'.format(self.number_ticket)
+        with open(filename, 'r') as f:
+            print(f.read())
+
+
+class AnswerTest(Test):
+    def __init__(self):
+        Test.__init__(self)
+        self.all_ans = list()
+    def answer_the_question(self):
+        for ans in range(1, number_of_questions+1):
+            self.all_ans.append(input('Введите ответ (одну из букв A,B,C,D) на вопрос №{}: \n'.format(ans)).upper())
+    def get_ans(self):
+        return self.all_ans
+
+
+class ResultTest(AnswerTest):
+    def __init__(self):
+        AnswerTest.__init__(self)
+        self.right_ans_from_file = list()
+        self.result = 0
+    def result_of_test(self):
+        filename = 'quiz_files/capitals_quiz_answer{}.txt'.format(self.number_ticket)
+        with open(filename, 'r') as f:
+            i = 0
+            for j in range(number_of_questions):
+                for line in f:
+                    if i > 0 and i < 51:
+                        right_ans = line.split(' ')[1]
+                        time.sleep(2)
+                        corr_ans = self.get_ans()[j]
+                        if right_ans == corr_ans:
+                            self.result += 1
+                    i += 1
+            f.close()
+
+        return self.result*10 / number_of_questions
+
+
 if __name__ == '__main__':
     number_of_questions = 50
-    for i in range(number_of_questions):
-        ticket = AnswerFileTicket(i)
-        ticket.write_answer()
-        ticket.write_head()
-        ticket.write_all_questions()
+    number_tickets = 35
+    test = ResultTest()
+    test.choose_ticket()
+    test.show_ticket()
+    test.answer_the_question()
+    print(test.result_of_test())
+    # for i in range(number_of_questions):
+    #     ticket = AnswerFileTicket(i)
+    #     ticket.write_answer()
+    #     ticket.write_head()
+    #     ticket.write_all_questions()
