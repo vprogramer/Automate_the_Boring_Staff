@@ -1,10 +1,8 @@
 import random
-import time
 
 
-class Question(object):
-    def __init__(self, number):
-        self.number = number
+class ParentQuestion(object):
+    def __init__(self):
         self.capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix', 'Arkansas': 'Little Rock',
                          'California': 'Sacramento', 'Colorado': 'Denver', 'Connecticut': 'Hartford',
                          'Delaware': 'Dover',
@@ -23,13 +21,22 @@ class Question(object):
                          'Utah': 'Salt Lake City',
                          'Vermont': 'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia',
                          'West Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
+        self.states = list(self.capitals.keys())
+
+    def shuffle_states(self):
+        random.shuffle(self.states)
+        return self.states
+
+
+class Question(ParentQuestion):
+    def __init__(self, number):
+        ParentQuestion.__init__(self)
+        self.number = number
         self.generate()
 
     def generate(self):
-        states = list(self.capitals.keys())
-        random.shuffle(states)
+        states = self.shuffle_states()
         self.correct_state = states[self.number]
-        # self.correct_state = states[random.randint(0, number_of_questions-1)]
         self.correct_capital = self.capitals[self.correct_state]
 
         wrong_answers = list(self.capitals.values())
@@ -121,7 +128,7 @@ class Test(object):
         self.number_ticket = None
 
     def choose_ticket(self):
-        self.number_ticket = 32 #random.randint(1, number_tickets)
+        self.number_ticket = random.randint(1, number_tickets)
 
     def show_ticket(self):
         filename = 'quiz_files/capitals_quiz{}.txt'.format(self.number_ticket)
@@ -145,34 +152,41 @@ class ResultTest(AnswerTest):
         AnswerTest.__init__(self)
         self.right_ans_from_file = list()
         self.result = 0
-    def result_of_test(self):
+
+    def get_result(self):
         filename = 'quiz_files/capitals_quiz_answer{}.txt'.format(self.number_ticket)
         with open(filename, 'r') as f:
             i = 0
-            for j in range(number_of_questions):
-                for line in f:
-                    if i > 0 and i < 51:
-                        right_ans = line.split(' ')[1]
-                        time.sleep(2)
-                        corr_ans = self.get_ans()[j]
-                        if right_ans == corr_ans:
-                            self.result += 1
-                    i += 1
+            for line in f:
+                if i > 0 and i < 51:
+                    self.right_ans_from_file.append(line.split(' ')[1])
+                i += 1
             f.close()
 
+    def result_of_test(self):
+        self.get_result()
+        for i in range(number_of_questions):
+            corr_ans = self.get_ans()[i]
+            if corr_ans == self.right_ans_from_file[i]:
+                self.result += 1
         return self.result*10 / number_of_questions
 
 
 if __name__ == '__main__':
     number_of_questions = 50
     number_tickets = 35
+
+    # generate exam tickets
+    for i in range(number_tickets):
+        ticket = AnswerFileTicket(i)
+        ticket.write_answer()
+        ticket.write_head()
+        ticket.write_all_questions()
+
+    # exam
     test = ResultTest()
     test.choose_ticket()
     test.show_ticket()
     test.answer_the_question()
     print(test.result_of_test())
-    # for i in range(number_of_questions):
-    #     ticket = AnswerFileTicket(i)
-    #     ticket.write_answer()
-    #     ticket.write_head()
-    #     ticket.write_all_questions()
+

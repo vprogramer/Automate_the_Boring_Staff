@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45226be1-83e4-40da-a3f7-b6aea23d727a" name="Default Changelist" comment="Program create files with answers and file with questions">
+    <list default="true" id="45226be1-83e4-40da-a3f7-b6aea23d727a" name="Default Changelist" comment="Problem with test score">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generate_exam_ticket.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_exam_ticket.py" afterDir="false" />
@@ -213,7 +213,9 @@
       <workItem from="1600411599223" duration="5339000" />
       <workItem from="1600684849007" duration="3864000" />
       <workItem from="1600756099747" duration="9889000" />
-      <workItem from="1600838679903" duration="13229000" />
+      <workItem from="1600838679903" duration="13601000" />
+      <workItem from="1600941926530" duration="2792000" />
+      <workItem from="1601017892118" duration="5320000" />
     </task>
     <task id="LOCAL-00001" summary="Update FileTicket and AnswerFileTicket">
       <created>1600756193092</created>
@@ -229,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600845587599</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Problem with test score">
+      <created>1600865860941</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600865860941</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +259,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update FileTicket and AnswerFileTicket" />
     <MESSAGE value="Program create files with answers and file with questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Program create files with answers and file with questions" />
+    <MESSAGE value="Problem with test score" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem with test score" />
   </component>
   <component name="WindowStateProjectService">
     <state x="781" y="418" key="Github.ShareDialog" timestamp="1600411630135">
@@ -261,22 +271,22 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="696" y="203" key="Github.UntrackedFilesDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1600411641222" />
-    <state width="1007" height="272" key="GridCell.Tab.0.bottom" timestamp="1600865551299">
+    <state width="1874" height="272" key="GridCell.Tab.0.bottom" timestamp="1600954714840">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1007" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1600865551299" />
-    <state width="1007" height="272" key="GridCell.Tab.0.center" timestamp="1600865551299">
+    <state width="1874" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1600954714840" />
+    <state width="1874" height="272" key="GridCell.Tab.0.center" timestamp="1600954714837">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1007" height="272" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1600865551299" />
-    <state width="1007" height="272" key="GridCell.Tab.0.left" timestamp="1600865551298">
+    <state width="1874" height="272" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1600954714837" />
+    <state width="1874" height="272" key="GridCell.Tab.0.left" timestamp="1600954714835">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1007" height="272" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1600865551298" />
-    <state width="1007" height="272" key="GridCell.Tab.0.right" timestamp="1600865551299">
+    <state width="1874" height="272" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1600954714835" />
+    <state width="1874" height="272" key="GridCell.Tab.0.right" timestamp="1600954714838">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1007" height="272" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600865551299" />
+    <state width="1874" height="272" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1600954714838" />
     <state width="1874" height="336" key="GridCell.Tab.1.bottom" timestamp="1600350134143">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -297,10 +307,14 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="461" y="153" key="SettingsEditor/0.0.1920.1035@0.0.1920.1035" timestamp="1600844492211" />
-    <state x="560" y="254" key="Vcs.Push.Dialog.v2" timestamp="1600845604766">
+    <state x="560" y="254" key="Vcs.Push.Dialog.v2" timestamp="1600865892668">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="560" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1035@0.0.1920.1035" timestamp="1600845604766" />
+    <state x="560" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1035@0.0.1920.1035" timestamp="1600865892668" />
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601023975536">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1035@0.0.1920.1035" timestamp="1601023975536" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1599567693181">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -314,6 +328,6 @@
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$work_with_files.coverage" NAME="work_with_files Coverage Results" MODIFIED="1600325006785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$randomQuizGenerator.coverage" NAME="randomQuizGenerator Coverage Results" MODIFIED="1600416034178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
     <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$lucky.coverage" NAME="lucky Coverage Results" MODIFIED="1599654853283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automate_online-materials" />
-    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$generate_exam_ticket.coverage" NAME="generate_exam_ticket Coverage Results" MODIFIED="1600865551288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Automate_the_Boring_Staff$generate_exam_ticket.coverage" NAME="generate_exam_ticket Coverage Results" MODIFIED="1601021398130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
