@@ -3,7 +3,7 @@ import random
 
 class ParentQuestion(object):
     def __init__(self):
-        self.capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix', 'Arkansas': 'Little Rock',
+        self.__capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix', 'Arkansas': 'Little Rock',
                          'California': 'Sacramento', 'Colorado': 'Denver', 'Connecticut': 'Hartford',
                          'Delaware': 'Dover',
                          'Florida': 'Tallahassee', 'Georgia': 'Atlanta', 'Hawaii': 'Honolulu', 'Idaho': 'Boise',
@@ -21,63 +21,67 @@ class ParentQuestion(object):
                          'Utah': 'Salt Lake City',
                          'Vermont': 'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia',
                          'West Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
-        self.states = list(self.capitals.keys())
+        self.__states = list(self.__capitals.keys())
 
     def shuffle_states(self):
-        random.shuffle(self.states)
-        return self.states
+        random.shuffle(self.__states)
+        return self.__states
+
+    def get_capitals(self):
+        return self.__capitals
 
 
 class Question(ParentQuestion):
     def __init__(self, number):
         ParentQuestion.__init__(self)
-        self.number = number
+        self.__number = number
+        self.capitals = self.get_capitals()
         self.generate()
 
     def generate(self):
         states = self.shuffle_states()
-        self.correct_state = states[self.number]
-        self.correct_capital = self.capitals[self.correct_state]
+        self.__correct_state = states[self.__number]
+        self.__correct_capital = self.capitals[self.__correct_state]
 
         wrong_answers = list(self.capitals.values())
-        wrong_answers.remove(self.capitals.get(self.correct_state))
-        self.all_variants = [self.correct_capital] + random.sample(wrong_answers, 3)
+        wrong_answers.remove(self.capitals.get(self.__correct_state))
+        self.__all_variants = [self.__correct_capital] + random.sample(wrong_answers, 3)
 
     def get_cor_state(self):
-        return self.correct_state
+        return self.__correct_state
 
     def get_cor_capital(self):
-        return self.correct_capital
+        return self.__correct_capital
 
     def get_all_variants(self):
-        return self.all_variants
+        return self.__all_variants
 
 
 class Ticket(object):
     def __init__(self, number):
         self.number = number
-        self.correct_answers = list()
-        self.answers = list()
-        self.position_right_answer = list()
+        self.__correct_answers = list()
+        self.__answers = list()
+        self.__position_right_answer = list()
         self.create()
 
     def create(self):
         for question_number in range(number_of_questions):
             quest = Question(question_number)
-            self.correct_answers.append((quest.get_cor_state(), quest.get_cor_capital()))
+            self.__correct_answers.append((quest.get_cor_state(), quest.get_cor_capital()))
             temporal_all_variants = quest.get_all_variants()
             random.shuffle(quest.get_all_variants())
-            self.position_right_answer.append(temporal_all_variants.index(quest.get_cor_capital()))
-            self.answers.append(temporal_all_variants)
+            self.__position_right_answer.append(temporal_all_variants.index(quest.get_cor_capital()))
+            self.__answers.append(temporal_all_variants)
 
     def get_correct_answers(self):
-        return self.correct_answers
+        return self.__correct_answers
 
     def get_all_answers(self):
-        return self.answers
+        return self.__answers
 
     def get_correct_position(self):
-        return self.position_right_answer
+        return self.__position_right_answer
 
 
 class FileTicket(Ticket):
@@ -135,23 +139,26 @@ class Test(object):
         with open(filename, 'r') as f:
             print(f.read())
 
+    def get_num_ticket(self):
+        return self.number_ticket
+
 
 class AnswerTest(Test):
     def __init__(self):
         Test.__init__(self)
-        self.all_ans = list()
+        self.__all_ans = list()
     def answer_the_question(self):
         for ans in range(1, number_of_questions+1):
-            self.all_ans.append(input('Введите ответ (одну из букв A,B,C,D) на вопрос №{}: \n'.format(ans)).upper())
+            self.__all_ans.append(input('Введите ответ (одну из букв A,B,C,D) на вопрос №{}: \n'.format(ans)).upper())
     def get_ans(self):
-        return self.all_ans
+        return self.__all_ans
 
 
 class ResultTest(AnswerTest):
     def __init__(self):
         AnswerTest.__init__(self)
-        self.right_ans_from_file = list()
-        self.result = 0
+        self.__right_ans_from_file = list()
+        self.__result = 0
 
     def get_result(self):
         filename = 'quiz_files/capitals_quiz_answer{}.txt'.format(self.number_ticket)
@@ -159,7 +166,7 @@ class ResultTest(AnswerTest):
             i = 0
             for line in f:
                 if i > 0 and i < 51:
-                    self.right_ans_from_file.append(line.split(' ')[1])
+                    self.__right_ans_from_file.append(line.split(' ')[1])
                 i += 1
             f.close()
 
@@ -167,21 +174,21 @@ class ResultTest(AnswerTest):
         self.get_result()
         for i in range(number_of_questions):
             corr_ans = self.get_ans()[i]
-            if corr_ans == self.right_ans_from_file[i]:
-                self.result += 1
-        return self.result*10 / number_of_questions
+            if corr_ans == self.__right_ans_from_file[i]:
+                self.__result += 1
+        return self.__result*10 / number_of_questions
 
 
 if __name__ == '__main__':
     number_of_questions = 50
     number_tickets = 35
 
-    # generate exam tickets
-    for i in range(number_tickets):
-        ticket = AnswerFileTicket(i)
-        ticket.write_answer()
-        ticket.write_head()
-        ticket.write_all_questions()
+    # # generate exam tickets
+    # for i in range(number_tickets):
+    #     ticket = AnswerFileTicket(i)
+    #     ticket.write_answer()
+    #     ticket.write_head()
+    #     ticket.write_all_questions()
 
     # exam
     test = ResultTest()
@@ -189,4 +196,6 @@ if __name__ == '__main__':
     test.show_ticket()
     test.answer_the_question()
     print(test.result_of_test())
+
+
 
