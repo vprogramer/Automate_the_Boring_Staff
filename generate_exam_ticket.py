@@ -183,12 +183,12 @@ if __name__ == '__main__':
     number_of_questions = 50
     number_tickets = 35
 
-    # # generate exam tickets
-    # for i in range(number_tickets):
-    #     ticket = AnswerFileTicket(i)
-    #     ticket.write_answer()
-    #     ticket.write_head()
-    #     ticket.write_all_questions()
+    # generate exam tickets
+    for i in range(number_tickets):
+        ticket = AnswerFileTicket(i)
+        ticket.write_answer()
+        ticket.write_head()
+        ticket.write_all_questions()
 
     # exam
     test = ResultTest()
@@ -197,5 +197,8 @@ if __name__ == '__main__':
     test.answer_the_question()
     print(test.result_of_test())
 
+    quest = Question(1)
+    quest.number = quest.get_cor_capital()
+    print(quest.number)
 
 
